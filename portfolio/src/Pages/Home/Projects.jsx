@@ -1,8 +1,21 @@
 import "./Projects.css";
-import Fade from "react-reveal/Fade";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 import Skills from "./Skills";
 
 export default function Projects() {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   const projectList = [
     {
       title: "Weather Dashboard",
@@ -29,20 +42,28 @@ export default function Projects() {
 
   return (
     <>
-      <section id="MyPortfolio" className="projects--section">
+      <section id="MyPortfolio" className="projects--section" ref={ref}>
         <div className="projects--section--content">
           <h1 className="projects-section--heading">My Projects</h1>
           <div className="projects--grid">
             {projectList.map((project, index) => (
-              <Fade bottom key={index} duration={1200}>
-                <div className="project--card">
-                  <div className="project--info">
-                    <h2 className="project--title">{project.title}</h2>
-                    <p className="project--description">{project.description}</p>
-                    <a href={project.link} className="project--link">View Project</a>
-                  </div>
+              <motion.div
+                key={index}
+                className="project--card"
+                initial="hidden"
+                animate={controls}
+                variants={{
+                  visible: { opacity: 1, y: 0 },
+                  hidden: { opacity: 0, y: 100 }
+                }}
+                transition={{ duration: 1.5 }}
+              >
+                <div className="project--info">
+                  <h2 className="project--title">{project.title}</h2>
+                  <p className="project--description">{project.description}</p>
+                  <a href={project.link} className="project--link">View Project</a>
                 </div>
-              </Fade>
+              </motion.div>
             ))}
           </div>
         </div>
