@@ -20,9 +20,15 @@ export default function ContactMe() {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
+    setFormStatus("sending");
+
+    // Ensure form-name is present for Netlify
+    if (!formData.get("form-name")) {
+      formData.append("form-name", "contact");
+    }
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/?no-cache=1", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
