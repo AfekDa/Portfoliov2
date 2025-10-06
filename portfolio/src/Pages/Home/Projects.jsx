@@ -36,6 +36,12 @@ export default function Projects() {
       link: null
     },
     {
+      title: "IES → Radiance Lighting Simulation",
+      description: "Python tool that converts IES photometric files into Radiance inputs and generates lighting simulation outputs for multi-floor scenarios.",
+      technologies: ["Python", "Data Processing", "Radiance (simulation)", "Visualization"],
+      link: "https://github.com/AfekDa/Ies2rad"
+    },
+    {
       title: "Unity Lazer Defender",
       description: "Developed a 2D space shooter game with Unity C#, featuring engaging gameplay mechanics and polished user experience.",
       technologies: ["Unity", "C#", "Game Development"],
