@@ -18,26 +18,29 @@ export default function Projects() {
 
   const projectList = [
     {
-      title: "Weather Dashboard",
-      description: "A React and FastAPI app to view weather information for multiple cities, with user registration and city subscriptions.",
-      link: "https://github.com/AfekDa/weather-dashboard"
-    },
-    {
-      title: "OTP application",
-      description: "A React and Node.js app for email OTP verification, using MySQL for data storage and weather data for unique OTP generation.",
+      title: "One-Time Password Service",
+      description: "Developed a secure OTP service with email verification, featuring dynamic 6-digit OTP generation using weather data from three random cities. Includes SQL-based email validation and enhanced authentication security.",
+      technologies: ["React", "Node.js", "Express.js", "MySQL", "Nodemailer"],
       link: "#"
     },
     {
-      title: "Lazer Defender Game",
-      description: "A 2D space shooter game where players control a spaceship. Developed in Unity C#.",
-      link: "https://github.com/AfekDa/Unity-Lazer-defender"
+      title: "Weather Dashboard",
+      description: "Built a comprehensive weather application displaying real-time weather information based on user location or city search. Features location-based data retrieval and intuitive user interface.",
+      technologies: ["React", "FastAPI", "RESTful API", "SQL", "Docker", "JavaScript", "CSS"],
+      link: "https://github.com/AfekDa/weather-dashboard"
     },
     {
-      title: "Cost Management Application",
-      description: "An Express.js and Mongoose app providing RESTful web services to manage cost items and user details.",
-      link: "https://github.com/AfekDa/Server-nodejs"
+      title: "Ozzystory Platform",
+      description: "Full-stack development including Firebase authentication, Paddle Billing integration, interactive canvas tooling with Konva, and comprehensive admin panel for subscription management.",
+      technologies: ["React", "Firebase", "Konva", "FastAPI", "Paddle Billing", "TypeScript"],
+      link: null
     },
-    // Add more projects as needed
+    {
+      title: "Unity Lazer Defender",
+      description: "Developed a 2D space shooter game with Unity C#, featuring engaging gameplay mechanics and polished user experience.",
+      technologies: ["Unity", "C#", "Game Development"],
+      link: "https://github.com/AfekDa/Unity-Lazer-defender"
+    }
   ];
 
   return (
@@ -61,7 +64,14 @@ export default function Projects() {
                 <div className="project--info">
                   <h2 className="project--title">{project.title}</h2>
                   <p className="project--description">{project.description}</p>
-                  <a href={project.link} className="project--link">View Project</a>
+                  <div className="project--technologies">
+                    {project.technologies.map((tech, techIndex) => (
+                      <span key={techIndex} className="tech--tag">{tech}</span>
+                    ))}
+                  </div>
+                  {project.link && (
+                    <a href={project.link} className="btn btn-primary project--link">View Project →</a>
+                  )}
                 </div>
               </motion.div>
             ))}

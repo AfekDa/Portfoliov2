@@ -82,10 +82,38 @@ function Navbar() {
               smooth={true}
               offset={-70}
               duration={500}
+              to="Experience"
+              className="navbar--content"
+            >
+              Experience
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={closeMenu}
+              activeClass="navbar--active-content"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
               to="MyPortfolio"
               className="navbar--content"
             >
               Projects
+            </Link>
+          </li>
+          <li>
+            <Link
+              onClick={closeMenu}
+              activeClass="navbar--active-content"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              to="Skills"
+              className="navbar--content"
+            >
+              Skills
             </Link>
           </li>
           <li>

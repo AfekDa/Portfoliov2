@@ -19,7 +19,12 @@ export default function AboutMe() {
     <>
       <section id="AboutMe" className="about--section" ref={ref}>
         <div className="about--section--img">
-          <img src="./img/about-me.jpeg" alt="About Me" />
+          <img 
+            src="./img/about-me.jpeg" 
+            alt="Afek David - About Me" 
+            loading="lazy"
+            decoding="async"
+          />
         </div>
         <motion.div
           className="hero--section--content--box about--section--box"
@@ -34,17 +39,21 @@ export default function AboutMe() {
           <div className="hero--section--content">
             <h1 className="skills-section--heading">About Me</h1>
             <p className="hero--section-description">
-              Hello! I'm Afek David, a Computer Science student at the HIT with Dean's list honor. I'm passionate about software development and have been recognized on the Dean's List for my academic achievements.
-              My technical skills include Python, C, JavaScript, C#, SQL, React, Node.js, and more.
+              Hello! I'm Afek David, a Computer Science graduate from the Holon Institute of Technology (HIT) with Dean's List honors (GPA: 92). 
+              I'm passionate about building scalable software solutions and have extensive experience in full-stack development.
             </p>
             <p className="hero--section-description">
-              I have experience working as a React Developer, where I developed and implemented key features using React, CSS, and HTML. I also handled bug fixes and integrated third-party APIs to enhance user interactions and functionality.
+              Currently, I work as a Tutor at Dr-logy, mentoring students in algorithms, data structures, Python, and C programming. 
+              I guide students in developing strong problem-solving skills and solid programming foundations.
             </p>
             <p className="hero--section-description">
-              Additionally, I worked as a Community Manager for a Gaming Channel, where I grew community engagement through targeted social media strategies and utilized social media analytics tools to optimize content strategies.
+              Previously, I worked as a Software Developer at Ozzystory, where I implemented end-to-end authentication with Firebase, 
+              integrated Paddle Billing for subscription management, and built interactive canvas tooling with Konva. 
+              I designed REST/FastAPI endpoints with server-side validation and automated testing workflows.
             </p>
             <p className="hero--section-description">
-              I'm eager to bring my skills and creativity to a role in a dynamic, innovative environment that values continuous learning and growth. Feel free to reach out if you'd like to connect!
+              My technical expertise spans Python, C, JavaScript, TypeScript, React, Node.js, FastAPI, PostgreSQL, MongoDB, 
+              Firebase, Docker, and cloud technologies. I'm passionate about creating innovative solutions and mentoring others in technology.
             </p>
           </div>
         </motion.div>

@@ -1,70 +1,148 @@
-# Getting Started with Create React App
+# Afek David - Software Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, high-performance single-page portfolio showcasing Afek David's skills, experience, and projects as a Computer Science student and Software Developer.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Modern Design**: Sleek, responsive layout with smooth animations
+- **Performance Optimized**: Lazy loading, optimized images, and efficient rendering
+- **Mobile Responsive**: Fully responsive design for all device sizes
+- **SEO Optimized**: Meta tags, structured data, and semantic HTML
+- **PWA Ready**: Progressive Web App capabilities with manifest.json
+- **Accessibility**: WCAG compliant with reduced motion support
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 18, Framer Motion, React Router
+- **Styling**: CSS3 with CSS Variables, Flexbox, Grid
+- **Performance**: Lazy loading, image optimization, code splitting
+- **Build Tool**: Create React App with custom optimizations
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📱 Sections
 
-### `npm test`
+1. **Hero Section**: Introduction with call-to-action buttons
+2. **About Me**: Personal background and current role
+3. **Experience**: Work history with detailed accomplishments
+4. **Projects**: Portfolio of key projects with technology tags
+5. **Skills**: Comprehensive list of technical skills
+6. **Contact**: Contact form with modern styling
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎯 Key Highlights
 
-### `npm run build`
+- **Education**: Computer Science student at HIT with Dean's List honors (GPA: 93)
+- **Current Role**: Tutor at Dr-logy, mentoring students in algorithms and programming
+- **Previous Experience**: Software Developer at Ozzystory with full-stack development
+- **Technical Skills**: Python, C, JavaScript, TypeScript, React, Node.js, FastAPI, and more
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (>= 12.x)
+- npm or yarn
 
-### `npm run eject`
+### Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone the repository
+2. Navigate to the portfolio directory
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Runs the app in development mode at [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+### Production Build
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run build
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Creates an optimized production build in the `build` folder.
 
-### Code Splitting
+### Preview Production Build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+npm run preview
+```
 
-### Analyzing the Bundle Size
+Serves the production build locally for testing.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📊 Performance Features
 
-### Making a Progressive Web App
+- **Lazy Loading**: Components load on demand
+- **Image Optimization**: Lazy loading and proper alt tags
+- **Code Splitting**: Automatic code splitting for better performance
+- **CSS Optimization**: Efficient CSS with CSS variables and modern properties
+- **Bundle Optimization**: Optimized bundle size and loading
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🎨 Design System
 
-### Advanced Configuration
+### Colors
+- Primary: #5e3bee (Purple)
+- Success: #21ba36 (Green)
+- GitHub: #e62872 (Pink)
+- Background: #f8fafc (Light Gray)
+- Text: #282938 (Dark Blue)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Typography
+- Font Family: Roboto
+- Responsive font sizes
+- Proper line heights and spacing
 
-### Deployment
+### Components
+- Modern button styles with hover effects
+- Card-based layouts with shadows
+- Smooth animations and transitions
+- Responsive grid systems
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📱 Responsive Design
 
-### `npm run build` fails to minify
+- **Desktop**: Full-featured layout with grid systems
+- **Tablet**: Optimized for medium screens
+- **Mobile**: Hamburger menu and stacked layouts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🔧 Customization
+
+### Adding New Projects
+
+Edit `src/Pages/Home/Projects.jsx` and add new project objects:
+
+```javascript
+{
+  title: "Project Name",
+  description: "Project description",
+  technologies: ["React", "Node.js", "MongoDB"],
+  link: "https://github.com/username/project"
+}
+```
+
+### Updating Skills
+
+Edit `src/Pages/Home/Skills.jsx` and modify the `skillsList` array.
+
+### Styling
+
+- Main styles: `src/App.css`
+- Component-specific styles: Individual CSS files
+- CSS Variables: Defined in `:root` for easy theming
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 📞 Contact
+
+- **Email**: afek.david@gmail.com
+- **LinkedIn**: [Afek David](https://www.linkedin.com/in/afek-david-221175218/)
+- **GitHub**: [AfekDa](https://github.com/AfekDa)
+
+---
+
+Built with ❤️ by Afek David

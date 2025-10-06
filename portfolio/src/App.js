@@ -1,8 +1,10 @@
 import "./App.css";
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./Pages/Home/Navbar";
-import Home from "./Pages/Home/Homescreen";
+
+// Lazy load components for better performance
+const Home = lazy(() => import("./Pages/Home/Homescreen"));
 
 function App() {
   return (
@@ -10,10 +12,12 @@ function App() {
       <Router>
         <div>
           <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="*" element={<div>404 Not Found</div>}></Route>
-          </Routes>
+          <Suspense fallback={<div className="loading-spinner">Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+              <Route path="*" element={<div>404 Not Found</div>}></Route>
+            </Routes>
+          </Suspense>
         </div>
       </Router>
     </div>
